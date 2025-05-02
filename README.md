@@ -1,47 +1,43 @@
 # Backend Python - ChatBot DeLaVega
 
-Backend em Python do ChatBot DeLaVega, uma plataforma avançada de chat que suporta múltiplos provedores de LLM.
+Python backend for ChatBot DeLaVega, an advanced chat platform that supports multiple LLM providers.
 
-## Características Principais
+## Main Features
 
-- **Múltiplos Provedores LLM:**
+- **Multiple LLM Providers:**
   - OpenAI (GPT-4, GPT-3.5)
   - Anthropic (Claude 3)
   - Google (Gemini Pro)
-  - Llama (Servidor HTTP)
-  - Groq
-  - Mistral
-  - Azure OpenAI
-  - OpenRouter
+  - Llama (HTTP Server)
 
-- **Funcionalidades Avançadas:**
-  - Streaming de respostas
-  - Memória de conversação
+
+- **Advanced Features:**
+  - Response streaming
+  - Conversation memory
   - Function calling (OpenAI)
-  - Configurações de segurança (Google)
-  - Processamento de documentos
-  - Integração com Supabase
+  - Security settings (Google)
+  - Document processing
+  - Supabase integration
 
-## Requisitos
+## Requirements
 
 - Python 3.9+
-- pip (gerenciador de pacotes Python)
-- Chaves de API dos provedores desejados
+- pip (Python package manager)
+- API keys from desired providers
 
-## Instalação
+## Installation
 
-1. Clone o repositório:
+1. Clone the repository:
 ```bash
-git clone [URL_DO_REPOSITORIO]
-cd backend
+git clone [[chatbot-delavega-service.git]](https://github.com/diegoperezeng/chatbot-delavega-service.git)
 ```
 
-2. Crie um ambiente virtual:
+2. Create a virtual environment:
 ```bash
 python -m venv venv
 ```
 
-3. Ative o ambiente virtual:
+3. Activate the virtual environment:
 - Windows:
 ```bash
 .\venv\Scripts\activate
@@ -51,62 +47,62 @@ python -m venv venv
 source venv/bin/activate
 ```
 
-4. Instale as dependências:
+4. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-5. Configure as variáveis de ambiente:
+5. Configure environment variables:
 ```bash
 cp .env.example .env
 ```
 
-6. Edite o arquivo `.env` com suas configurações:
+6. Edit the `.env` file with your settings:
 ```env
-# Configurações do Servidor
+# Server Settings
 PORT=8000
 HOST=0.0.0.0
 DEBUG=True
 
-# Chave Secreta (Gere uma chave forte)
-SECRET_KEY=sua_chave_secreta_aqui
+# Secret Key (Generate a strong key)
+SECRET_KEY=your_secret_key_here
 ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 # Supabase
-SUPABASE_URL=sua_url_supabase
-SUPABASE_KEY=sua_chave_supabase
+SUPABASE_URL=your_supabase_url
+SUPABASE_KEY=your_supabase_key
 
-# Chaves de API dos Provedores
-OPENAI_API_KEY=sua_chave_openai
-ANTHROPIC_API_KEY=sua_chave_anthropic
-GOOGLE_API_KEY=sua_chave_google
-AZURE_API_KEY=sua_chave_azure
-GROQ_API_KEY=sua_chave_groq
-MISTRAL_API_KEY=sua_chave_mistral
-OPENROUTER_API_KEY=sua_chave_openrouter
+# Provider API Keys
+OPENAI_API_KEY=your_openai_key
+ANTHROPIC_API_KEY=your_anthropic_key
+GOOGLE_API_KEY=your_google_key
+AZURE_API_KEY=your_azure_key
+GROQ_API_KEY=your_groq_key
+MISTRAL_API_KEY=your_mistral_key
+OPENROUTER_API_KEY=your_openrouter_key
 ```
 
-## Executando o Servidor
+## Running the Server
 
 ```bash
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-O servidor estará disponível em `http://localhost:8000`
+The server will be available at `http://localhost:8000`
 
-## Documentação da API
+## API Documentation
 
 - **Swagger UI:** `http://localhost:8000/docs`
-  - Documentação interativa com exemplos
-  - Teste os endpoints diretamente
-  - Schemas completos dos modelos
+  - Interactive documentation with examples
+  - Test endpoints directly
+  - Complete model schemas
 
 - **ReDoc:** `http://localhost:8000/redoc`
-  - Documentação mais limpa e organizada
-  - Melhor para leitura
+  - Cleaner and more organized documentation
+  - Better for reading
 
-## Estrutura do Projeto
+## Project Structure
 
 ```
 backend/
@@ -171,13 +167,13 @@ backend/
 └── README.md
 ```
 
-## Dependências Principais
+## Main Dependencies
 
-- **Framework Web:**
+- **Web Framework:**
   - FastAPI 0.109.2
   - Uvicorn 0.27.1
 
-- **Provedores LLM:**
+- **LLM Providers:**
   - OpenAI 1.12.0
   - Anthropic 0.18.1
   - Google AI Platform 1.43.0
@@ -192,28 +188,28 @@ backend/
   - langchain-mistralai 0.0.5
   - langchain-groq 0.0.1
 
-- **Processamento de Dados:**
+- **Data Processing:**
   - python-docx 1.1.0
   - numpy 1.26.4
   - nltk 3.8.1
   - markdown 3.5.2
   - chromadb 0.4.22
 
-- **Utilitários:**
+- **Utilities:**
   - pydantic 2.6.1
   - python-jose 3.3.0
   - passlib 1.7.4
   - httpx 0.26.0
   - tiktoken 0.6.0
 
-## Contribuindo
+## Contributing
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -am 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Crie um Pull Request
+1. Fork the project
+2. Create a branch for your feature (`git checkout -b feature/new-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/new-feature`)
+5. Create a Pull Request
 
-## Licença
+## License
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes. 
+This project is licensed under the MIT license - see the [LICENSE](LICENSE) file for details. 
