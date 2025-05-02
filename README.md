@@ -32,8 +32,7 @@ Backend em Python do ChatBot DeLaVega, uma plataforma avançada de chat que supo
 
 1. Clone o repositório:
 ```bash
-git clone [URL_DO_REPOSITORIO]
-cd backend
+git clone [[chatbot-delavega-service.git]](https://github.com/diegoperezeng/chatbot-delavega-service.git)
 ```
 
 2. Crie um ambiente virtual:
